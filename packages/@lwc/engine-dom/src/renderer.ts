@@ -13,6 +13,7 @@ import { Renderer } from '@lwc/engine-core';
 export const useSyntheticShadow = hasOwnProperty.call(Element.prototype, '$shadowToken$');
 
 export const renderer: Renderer<Node, Element> = {
+    ssr: false,
     syntheticShadow: useSyntheticShadow,
 
     createElement(tagName: string, namespace: string): Element {
